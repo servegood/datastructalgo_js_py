@@ -11,4 +11,4 @@ function compressBoxesTwice(boxes) {
   })
 }
 
-compressBoxesTwice(['hello'])
+compressBoxesTwice(['hello', 'world'])
