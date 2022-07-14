@@ -1,3 +1,5 @@
+//hash / dictionary / objects
+
 let user = {
   age: 54,
   name: 'Santa',
