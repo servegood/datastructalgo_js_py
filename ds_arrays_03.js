@@ -27,4 +27,7 @@ function mergeSortedArrays(array1, array2) {
   return mergedArray
 }
 
-console.log(mergeSortedArrays([0, 3, 4, 31], [3, 4, 6, 30]))
+a = [0, 3, 4, 31]
+b = [3, 4, 6, 30]
+x = mergeSortedArrays(a, b)
+console.log(x)
