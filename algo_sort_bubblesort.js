@@ -1,5 +1,6 @@
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 
+//Bubbling up the largest value using multiple pass throughs
 //Time Complexity O (n^2) for average & worst - because it loops thru every element and keeps swapping
 //till done. Space Complexity if O(1)
 function bubbleSort(array) {
