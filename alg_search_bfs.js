@@ -128,7 +128,7 @@ class BinarySearchTree {
       }
     }
   }
-  BreadthFirstSearch() {
+  BreadthFirstSearch_Iterative() {
     let currentNode = this.root
     let list = []
     let queue = []
@@ -146,6 +146,22 @@ class BinarySearchTree {
     }
     return list
   }
+  BreadthFirstSearch_Recursive(queue, list) {
+    if (!queue.length) {
+      return list
+    }
+    const currentNode = queue.shift()
+    list.push(currentNode.value)
+
+    if (currentNode.left) {
+      queue.push(currentNode.left)
+    }
+    if (currentNode.right) {
+      queue.push(currentNode.right)
+    }
+
+    return this.BreadthFirstSearch_Recursive(queue, list)
+  }
 }
 
 const tree = new BinarySearchTree()
@@ -157,7 +173,10 @@ tree.insert(170)
 tree.insert(15)
 tree.insert(1)
 
-console.log('BFS', tree.BreadthFirstSearch())
+console.log('===Iterative BFS')
+console.log('BFS', tree.BreadthFirstSearch_Iterative())
+console.log('===Recursive BFS')
+console.log('BFS', tree.BreadthFirstSearch_Recursive([tree.root], []))
 
 //     9
 //  4     20
